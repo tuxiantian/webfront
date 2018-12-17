@@ -291,26 +291,6 @@ data: {
 escape(encodeURIComponent())
 ```
 
-### 数组排序
-
-```js
-var arr = ["a", "b", "A", "B"];
-arr.sort();
-console.log(arr);
-
-var arr = [23, 9, 4, 78, 3];
-var compare = function (x, y) {//比较函数
-    if (x < y) {
-        return -1;
-    } else if (x > y) {
-        return 1;
-    } else {
-        return 0;
-    }
-}
-console.log(arr.sort(compare));
-```
-
 ```js
 if (Array.prototype.indexOf) {
      alert("你的浏览器支持indexOf方法");
@@ -701,42 +681,11 @@ console.log( replace("ssssss", "ss", "s") ); // sss
 </script>
 ```
 
-### js数组合并
 
-```js
-Array.prototype.push.apply(arrA, arrB);
-
-var merge = function() {
-    return Array.prototype.concat.apply([], arguments)
-  }
-
-merge([1,2,4],[3,4],[5,6]);
-```
 ### == 与 === 的区别
 js
 ==         等于
 ===         全等（值和类型）
-
-### 数组排序
-
-```js
-Arrays.sort(wiStateParks, new Comparator<String>() {
-	public int compare(String o1, String o2) {
-		if (o1 == null && o2 == null) {
-			return 0;
-		}
-		if (o1 == null) {
-			return 1;
-		}
-		if (o2 == null) {
-			return -1;
-		}
-		return o1.compareTo(o2);
-	}
-});
-Comparator.nullsLast((s1, s2) -> s1.length() - s2.length())
-Comparator.nullsLast(String::compareToIgnoreCase)
-```
 
 ```
 $('#CheckBox').is(':checked')
