@@ -22,57 +22,6 @@ var json = '{"name":"GDT","age":23,"University":"GDUT"}';
 var info = eval('(' + json + ')');  //解析为JSON对象
 ```
 
-### 数组去重(相同类型)
-
-```
-Array.prototype.unique3=function(){
-    var res=[]; //创建一个存放数组结果集
-    var json={};//对象属性标识数组中是否有重复元素
-    for(var i = 0, len = this.length; i < len; i++){
-        if (!json[this[i]]) {
-            res.push(this[i]);
-            json[this[i]]=1;
-        }
-    }
-    return res;
-}
-var array3=['d','c','d','a','v','n','v'];
-console.info(array3.unique3());
-```
-
-### 获取数组最值
-
-```js
-var numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
-var maxInNumbers = Math.max.apply(Math, numbers);
-var minInNumbers = Math.min.apply(Math, numbers);
-```
-
-### 乱序
-
-```js
-var numbers = [5, 458 , 120 , -215 , 228 , 400 , 122205, -85411];
-numbers = numbers.sort(function(){ return Math.random() - 0.5});
-```
-
-### 清空数组的三种方式
-
-```js
-var array = [1, 2, 3, 4];
-//方式1
-array.splice(0,array.length); //删除数组中所有项
-//方式2
-array.length = 0;  //length属性可以赋值,length是只读
-//方式3
-array = [];  // 推荐
-
-for (var name in object) {
-    if (object.hasOwnProperty(name)) {
-        // do something with name
-    }
-}
-```
-
 ```js
 var array = [6,7,5,84,6];
 //所有对象,都具有toString和valueOf
@@ -227,13 +176,6 @@ $.trim(str)
 ```js
 data = data.replace(/\+/g, "%2B");
 data = data.replace(/\&/g, "%26");
-```
-
-### 数组追加
-```js
-var array1 = [12 , "foo" , {"name": "Joe"} , -2458];
-var array2 = ["Doe" , 555 , 100];
-Array.prototype.push.apply(array1, array2); //array2 追加到array1
 ```
 
 ### 不缓存
@@ -641,15 +583,6 @@ if (typeof $("#div1").prev().html() != "undefined") {
 }
 
 ```js
-function isArray(arg) {
-​    if (typeof arg === 'object') {
-​        return Object.prototype.toString.call(arg) === '[object Array]';
-​    }
-​    return false;
-}
-```
-
-```js
 /**
  * 字符串替换
  * @param  {string} str    要被替换的字符串
@@ -779,18 +712,3 @@ nextAll()只能跟其后的同辈元素匹配
 $(“input”)获取的是<input>元素，
 :input选取所有的<input>、<textarea>、<select>、<button>元素
 
-### 获取数组中最后一个元素
-
-```
-var array = [1,2,3,4,5,6];
-console.log(array.slice(-1)); // [6]
-console.log(array.slice(-2)); // [5,6]
-console.log(array.slice(-3)); // [4,5,6]
-```
-### 删除尾部
-
-```js
-var str="a,n,t,z,o,n,e,";
-var reg=/,$/g;
-console.log(str.replace(reg,""));
-```
