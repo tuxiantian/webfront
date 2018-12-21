@@ -22,12 +22,6 @@ var json = '{"name":"GDT","age":23,"University":"GDUT"}';
 var info = eval('(' + json + ')');  //解析为JSON对象
 ```
 
-```js
-var array = [6,7,5,84,6];
-//所有对象,都具有toString和valueOf
-console.log(array.toString());//toSTring内部就调用join()
-console.log(array.valueOf());//返回当前数组对象
-```
 
 ```
 "37"-7  -->30
@@ -521,19 +515,6 @@ const person={
   age:16
 };
 console.log(person.name);//xiaobo
-```
-
-```js
-$.isArray
-var jQuery_1_6_3 = $.noConflict(true);
-```
-
-```js
-var a=[1,2,3,5];
-Math.max.apply(null, a)
-
-var a=[1,2,3,[5,6],[1,4,8]];
-var ta=a.join(",").split(",");//转化为一维数组
 ```
 
 ### 设置按钮不可用
