@@ -249,9 +249,8 @@ console.log(a.length);  1
 console.log(a.foobar);  2
 当一个变量被声明后，扩充其属性并不会改变原数据类型
 ```
-
-```
 查看jquery版本
+```
 if (typeof jQuery != 'undefined') {
   console.log(jQuery.fn.jquery);-->jQuery().jquery
 }
@@ -274,7 +273,8 @@ setHeader("Access-Control-Allow-Origin", "*") # 允许所有域名访问
 
 基本类型(number,string,boolean,null,undefined)是不可变
 
-引用类型的比较是引用的比较
+### 引用类型的比较是引用的比较
+
 ```js
 var person1 = {};
 var person2 = {};
@@ -425,8 +425,7 @@ window.addEventListener("beforeunload", function(e) {
 [].concat([1,2,3]) [1,2,3]
 concat() 方法将传入的数组或非数组值与原数组合并，组成一个新的数组并返回
 
-[].concat，这个的结果是 Array.prototype.concat
-执行一个逗号操作符。逗号操作符对它的每个操作对象求值（从左至右），然后返回最后一个操作对象的值 1,2,3 -->3
+[].concat，这个的结果是 Array.prototype.concat执行一个逗号操作符。逗号操作符对它的每个操作对象求值（从左至右），然后返回最后一个操作对象的值 1,2,3 -->3
 Array.prototype.concat[3]
 
 Array.prototype.concat[3] = [1,2,3]
